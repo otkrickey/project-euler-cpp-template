@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build C++ file for AtCoder (g++)",
+            "type": "shell",
+            "command": "/usr/bin/g++-9",
+            "args": [
+                "-std=gnu++17",
+                "-Wall",
+                "-Wextra",
+                "-O2",
+                "-DONLINE_JUDGE",
+                "-I/opt/boost/gcc/include",
+                "-L/opt/boost/gcc/lib",
+                "-I${workspaceFolder}/ac-library",
+                "-o",
+                "'${workspaceFolder}/problem.exe'",
+                "'${file}'"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+    }
+}
